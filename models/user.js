@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
 
+const friendSchema = mongoose.Schema({
+    name: String,
+    img: String,
+})
 
 const userSchema = mongoose.Schema({
     token : String,
@@ -7,6 +11,7 @@ const userSchema = mongoose.Schema({
     password: String,
     img: String,
     role: String,
+    friend: [friendSchema]
     
 });
 
